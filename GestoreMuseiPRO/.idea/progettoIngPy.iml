@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PyNamespacePackagesService">
+    <option name="namespacePackageFolders">
+      <list>
+        <option value="$MODULE_DIR$/Tests" />
+        <option value="$MODULE_DIR$/statistica" />
+        <option value="$MODULE_DIR$/Configurazione" />
+        <option value="$MODULE_DIR$/database" />
+        <option value="$MODULE_DIR$/Dipendenti" />
+        <option value="$MODULE_DIR$/esposizione" />
+        <option value="$MODULE_DIR$/Login" />
+        <option value="$MODULE_DIR$/mostra" />
+        <option value="$MODULE_DIR$/opera" />
+        <option value="$MODULE_DIR$/prenotazione" />
+        <option value="$MODULE_DIR$/Qr" />
+        <option value="$MODULE_DIR$/Ui" />
+        <option value="$MODULE_DIR$/visita" />
+      </list>
+    </option>
+  </component>
+</module>

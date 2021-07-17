@@ -1,0 +1,13 @@
+{
+    "Struttura Museo": {
+        "sale": [
+            "Sala A",
+            "Sala B",
+            "Sala C",
+            "Sala D",
+            "Sala E",
+            "Sala F"
+        ],
+        "n_prenotazioni_max": 210
+    }
+}

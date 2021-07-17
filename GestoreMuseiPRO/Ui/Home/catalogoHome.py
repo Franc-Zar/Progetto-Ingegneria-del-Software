@@ -1,0 +1,110 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+from Ui import logo_rc
+
+
+class UiCatalogoHome(object):
+    def setupUi(self, CatalogoHome):
+        CatalogoHome.setObjectName("CatalogoHome")
+        CatalogoHome.resize(480, 640)
+        CatalogoHome.setStyleSheet("background-color: rgb(242,233,216)")
+
+        self.centralWidget = QtWidgets.QWidget(CatalogoHome)
+        self.centralWidget.setObjectName("centralwidget")
+        self.frame = QtWidgets.QFrame(self.centralWidget)
+        self.frame.setGeometry(QtCore.QRect(10, 10, 451, 571))
+        self.frame.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.frame.setObjectName("frame")
+
+        self.utenteLabel = QtWidgets.QLabel(self.frame)
+        self.utenteLabel.setGeometry(QtCore.QRect(30, 30, 111, 16))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.utenteLabel.setFont(font)
+        self.utenteLabel.setStyleSheet("color:rgb(229, 82, 2);")
+        self.utenteLabel.setObjectName("utenteLabel")
+
+        self.accountMenu = QtWidgets.QComboBox(self.frame)
+        self.accountMenu.setGeometry(QtCore.QRect(20, 50, 141, 22))
+        self.accountMenu.setStyleSheet("color: rgb(65, 65, 65);")
+        self.accountMenu.setCurrentText("")
+        self.accountMenu.setFrame(True)
+        self.accountMenu.setObjectName("accountMenu")
+        self.accountMenu.addItem("")
+        self.accountMenu.addItem("")
+
+        self.minimizeButton = QtWidgets.QPushButton(self.frame)
+        self.minimizeButton.setGeometry(QtCore.QRect(400, 10, 21, 21))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.minimizeButton.setFont(font)
+        self.minimizeButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.minimizeButton.setMouseTracking(True)
+        self.minimizeButton.setStyleSheet("color:rgb(3, 95, 144);")
+        self.minimizeButton.setFlat(True)
+        self.minimizeButton.setObjectName("minimizeButton")
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.closeButton = QtWidgets.QPushButton(self.frame)
+        self.closeButton.setGeometry(QtCore.QRect(420, 10, 21, 21))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.closeButton.setFont(font)
+        self.closeButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.closeButton.setStyleSheet("color:rgb(3, 95, 144);\n"
+                                       "border-radius:10px;\n"
+                                       "background-color: rgb(229, 82, 2);")
+        self.closeButton.setFlat(True)
+        self.closeButton.setObjectName("closeButton")
+
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.frame)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(40, 130, 381, 351))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+
+        self.catalogoButton = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.catalogoButton.setFont(font)
+        self.catalogoButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.catalogoButton.setStyleSheet("background-color: rgb(3, 95, 144); color:rgb(242,233,216);")
+        self.catalogoButton.setObjectName("catalogoButton")
+        self.verticalLayout.addWidget(self.catalogoButton)
+
+        self.logoLabel = QtWidgets.QLabel(self.frame)
+        self.logoLabel.setGeometry(QtCore.QRect(380, 40, 61, 61))
+        self.logoLabel.setStyleSheet("image:url(:/newPrefix/LoginLogo.png)")
+        self.logoLabel.setText("")
+        self.logoLabel.setScaledContents(True)
+        self.logoLabel.setObjectName("logoLabel")
+
+        CatalogoHome.setCentralWidget(self.centralWidget)
+        self.menubar = QtWidgets.QMenuBar(CatalogoHome)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 25))
+        self.menubar.setObjectName("menubar")
+        CatalogoHome.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(CatalogoHome)
+        self.statusbar.setObjectName("statusbar")
+        CatalogoHome.setStatusBar(self.statusbar)
+
+        self.retranslateUi(CatalogoHome)
+        self.accountMenu.setCurrentIndex(-1)
+        QtCore.QMetaObject.connectSlotsByName(CatalogoHome)
+
+    def retranslateUi(self, CatalogoHome):
+        _translate = QtCore.QCoreApplication.translate
+        CatalogoHome.setWindowTitle(_translate("CatalogoHome", "Catalogatore"))
+        self.utenteLabel.setText(_translate("CatalogoHome", "NOMEUTENTE"))
+        self.accountMenu.setItemText(0, _translate("CatalogoHome", "Modifica Password"))
+        self.accountMenu.setItemText(1, _translate("CatalogoHome", "Logout"))
+        self.minimizeButton.setText(_translate("CatalogoHome", "-"))
+        self.closeButton.setText(_translate("CatalogoHome", "X"))
+        self.catalogoButton.setText(_translate("CatalogoHome", "Catalogo"))
