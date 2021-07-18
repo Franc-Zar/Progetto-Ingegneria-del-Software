@@ -48,6 +48,7 @@ class GestoreMuseiPRO(QMainWindow):
 
     # metodo che avvia l'interfaccia del Login
     def startLogin(self):
+        self.popUp.close()
         self.username = ""
         self.ruolo = ""
         self.home = UiLogin()
@@ -430,6 +431,7 @@ class GestoreMuseiPRO(QMainWindow):
 
     # metodo di reindirizzamento all'interfaccia home relativa al ruolo dell'account in utilizzo
     def goHome(self):
+        self.popUp.close()
         if self.ruolo == "admin":
             self.startAdminHome()
         elif self.ruolo == "front_office":
