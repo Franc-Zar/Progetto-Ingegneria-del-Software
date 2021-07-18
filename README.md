@@ -6,3 +6,4 @@
   * username: **catalogatore**       password: **catalogatore**
   * username: **front_office**       password: **front_office**
 
+Per visualizzare le statistiche, fare riferimento ai mesi di Aprile/Maggio 2021.
